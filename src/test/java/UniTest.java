@@ -15,7 +15,7 @@ public class UniTest {
 
     @BeforeClass
     public static void createAccount() {
-        //System.setProperty("webdriver.gecko.driver","C:\\Users\\Kanta\\Downloads\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver","C:\\Users\\Kanta\\Downloads\\geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
