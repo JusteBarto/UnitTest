@@ -7,8 +7,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
-
-public class UnitTest {
+public class UniTest {
 
     private static String email;
     private static String password;
