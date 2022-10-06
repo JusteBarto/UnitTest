@@ -1,6 +1,7 @@
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
@@ -11,12 +12,12 @@ public class UniTest {
 
     private static String email;
     private static String password;
-    private static FirefoxDriver driver;
+    private static ChromeDriver driver;
 
     @BeforeClass
     public static void createAccount() {
-        System.setProperty("webdriver.gecko.driver","C:\\Users\\Kanta\\Downloads\\geckodriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Kanta\\Downloads\\chromedriver.exe");
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
 
@@ -39,7 +40,7 @@ public class UniTest {
     @Test
     public void Test1() throws FileNotFoundException, InterruptedException {
         String item;
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.xpath("//a[@href = \"/login\"]")).click();
@@ -89,7 +90,7 @@ public class UniTest {
     @Test
     public void Test2() throws InterruptedException, FileNotFoundException {
         String item;
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.xpath("//a[@href = \"/login\"]")).click();
